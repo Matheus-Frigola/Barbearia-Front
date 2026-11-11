@@ -1,0 +1,16 @@
+/* Página inicial: filtros, grade de barbearias e "Como funciona". */
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:24px}
+.filters .sp{flex:1}
+.filters select{border:2px solid var(--ink);background:var(--card);border-radius:999px;padding:6px 14px;font-weight:600;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:22px}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border:2px solid var(--ink);border-radius:8px;background:var(--card);overflow:hidden;padding:0;margin:0}
+.steps li{list-style:none;padding:22px 24px;border-right:2px solid var(--ink)}
+.steps li:last-child{border-right:0}
+.steps b{display:block;font:800 30px/1 var(--display);margin-bottom:6px}
+.steps .n{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--porcelain);font:800 18px/1 var(--display);margin-bottom:12px}
+.steps p{margin:0;color:var(--ink2)}
+@media (max-width:700px){
+  .steps li{border-right:0;border-bottom:2px solid var(--ink)}
+  .steps li:last-child{border-bottom:0}
+}

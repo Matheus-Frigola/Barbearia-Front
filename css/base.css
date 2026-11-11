@@ -1,0 +1,23 @@
+/* Reset, tipografia base, container, faixa xadrez, rodapé e estados de página. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--porcelain);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:.005em;margin:0}
+
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section.block{padding:clamp(36px,6vw,64px) 0}
+
+/* faixa xadrez de piso de barbearia */
+.tiles{height:16px;background:conic-gradient(#101114 25%,#fff 0 50%,#101114 0 75%,#fff 0) 0 0/16px 16px}
+
+/* carregando, erro e página não encontrada */
+.state{padding:60px 0;text-align:center;color:var(--ink2)}
+.state b{display:block;font:800 36px/1 var(--display);color:var(--ink);margin-bottom:8px}
+
+footer.site{border-top:2px solid var(--ink);padding:26px 0 40px;color:var(--muted);font-size:14px}
+footer.site .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

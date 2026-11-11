@@ -1,0 +1,50 @@
+/* Peças reutilizáveis: botões, chips, campos, painel, listas, avatar, preço, estado vazio. */
+
+/* botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:15px;padding:11px 20px;border-radius:999px;border:2px solid var(--ink);background:transparent;cursor:pointer;text-decoration:none;transition:background .15s,color .15s,transform .1s}
+.btn:hover{background:var(--ink);color:var(--porcelain)}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--redbtn);border-color:var(--redbtn);color:#fff}
+.btn.primary:hover{background:#A51D23;border-color:#A51D23;color:#fff}
+.btn.small{padding:7px 14px;font-size:14px}
+.btn:disabled{opacity:.4;cursor:not-allowed;pointer-events:none}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;padding:4px 11px;border-radius:999px;border:1.5px solid var(--line);background:transparent;white-space:nowrap}
+button.chip{cursor:pointer;font-size:14px;padding:6px 14px;border-width:2px;border-color:var(--ink)}
+button.chip:hover{background:var(--line)}
+button.chip[aria-pressed="true"]{background:var(--ink);color:var(--porcelain)}
+.chip.ok{background:var(--okbg);color:var(--ok);border-color:transparent}
+.chip.bad{background:var(--badbg);color:var(--bad);border-color:transparent}
+.chip.neutral{background:var(--line);border-color:transparent;color:var(--ink2)}
+
+/* campos e mensagens */
+.field{display:grid;gap:5px}
+.field label{font-weight:600;font-size:14px}
+.field input{border:2px solid var(--ink);border-radius:8px;background:var(--card);padding:11px 14px;min-width:240px;font-size:16px}
+.hint{font-size:13.5px;color:var(--muted)}
+.err{margin-top:14px;padding:10px 14px;border-radius:8px;background:var(--badbg);color:var(--bad);font-weight:600;font-size:14.5px}
+
+/* painel e listas */
+.panel{background:var(--card);border:2px solid var(--ink);border-radius:8px}
+.list{margin:0;padding:0;list-style:none}
+.list li{display:flex;align-items:center;gap:14px;padding:14px 18px;border-top:1.5px solid var(--line)}
+.list li:first-child{border-top:0}
+.list .grow{flex:1;min-width:0}
+.list .name{font-weight:700;font-size:17px}
+.list .sub{color:var(--muted);font-size:14px}
+
+.price{font:800 26px/1 var(--display);white-space:nowrap}
+.avatar{width:46px;height:46px;border-radius:50%;background:var(--ink);color:var(--porcelain);display:grid;place-items:center;font:800 20px/1 var(--display);flex:none}
+
+/* linha de metadados e nota */
+.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap;color:var(--ink2);font-size:14.5px}
+.rate{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--ink)}
+.rate svg{width:15px;height:15px;fill:#E8A800}
+
+/* cabeçalho de seção e estado vazio */
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.sec-head h2{font-size:clamp(34px,5vw,52px)}
+.sec-head .count{color:var(--muted);font-weight:600}
+.empty{grid-column:1/-1;border:2px dashed var(--chrome);border-radius:8px;padding:34px;text-align:center;color:var(--ink2)}
+.empty b{display:block;font:800 30px/1 var(--display);color:var(--ink);margin-bottom:6px}

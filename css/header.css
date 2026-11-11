@@ -1,0 +1,18 @@
+/* Cabeçalho, logo, navegação e aviso do modo demonstração. */
+header.top{border-bottom:2px solid var(--ink);background:var(--porcelain);position:sticky;top:0;z-index:20}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:900 30px/1 var(--display);letter-spacing:.01em}
+.logo i{width:14px;height:30px;border:2px solid var(--ink);border-radius:8px;overflow:hidden;position:relative;display:block}
+.logo i::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,#C8252B 0 5px,#fff 5px 10px,#1D4E9E 10px 15px,#fff 15px 20px)}
+nav.main{display:flex;gap:6px}
+nav.main a{text-decoration:none;font-weight:600;padding:8px 14px;border-radius:999px}
+nav.main a:hover{background:var(--line)}
+nav.main a[aria-current="page"]{background:var(--ink);color:var(--porcelain)}
+
+#demo{display:none;background:var(--warnbg);color:var(--warn);border-bottom:2px solid var(--warn);font-size:14px}
+#demo .wrap{padding:8px 0}
+
+@media (max-width:520px){
+  nav.main a[data-nav="home"]{display:none}
+  .logo{font-size:28px}
+}

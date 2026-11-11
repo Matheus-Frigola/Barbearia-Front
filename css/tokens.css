@@ -1,0 +1,15 @@
+/* Design tokens: cores e fontes. Mude aqui para trocar a identidade visual. */
+:root{
+  --porcelain:#F4F5F2; --card:#FFFFFF; --ink:#101114; --ink2:#3B3F46; --muted:#656B75; --line:#D9DCDF;
+  --red:#C8252B; --redbtn:#C8252B; --blue:#1D4E9E; --chrome:#AEB4BC;
+  --ok:#1B6B37; --okbg:#DDF1E3; --bad:#A3201F; --badbg:#FBE3E1; --warn:#7A5A00; --warnbg:#FFF1CC;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --porcelain:#0E0F12; --card:#17191D; --ink:#F2F3F0; --ink2:#C9CCD1; --muted:#9AA1AB; --line:#2B2E34;
+    --red:#FF6A6F; --blue:#7DABF5;
+    --ok:#8FD3A2; --okbg:#18301F; --bad:#FF9D98; --badbg:#3A1D1B; --warn:#F2CF72; --warnbg:#33290A;
+  }
+}

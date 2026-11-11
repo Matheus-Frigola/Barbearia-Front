@@ -1,0 +1,12 @@
+/* Componente: card de barbearia (usado na grade da home). */
+.card{background:var(--card);border:2px solid var(--ink);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .12s,box-shadow .12s}
+.card:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--ink)}
+.cover{position:relative;height:132px;display:flex;align-items:flex-end;padding:12px 16px;color:#fff;overflow:hidden}
+.cover .mono{position:absolute;right:10px;top:-22px;font:900 170px/1 var(--display);color:rgba(255,255,255,.16)}
+.cover .tag{position:relative;background:rgba(0,0,0,.55);padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600}
+.cover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:conic-gradient(#101114 25%,#fff 0 50%,#101114 0 75%,#fff 0) 0 0/8px 8px}
+.card .body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:30px}
+.card .reviews{font-weight:500;color:var(--muted)}
+.card .tags{display:flex;gap:6px;flex-wrap:wrap}
+.card .go{margin-top:auto;padding-top:6px;font-weight:700}

@@ -1,0 +1,24 @@
+/* Página da barbearia: faixa de título, serviços, equipe e painel lateral. */
+.shophead{color:#fff;position:relative;overflow:hidden;border-bottom:2px solid var(--ink)}
+.shophead .wrap{padding:34px 0 44px;position:relative;z-index:1}
+.shophead .mono{position:absolute;right:4%;top:-60px;font:900 360px/1 var(--display);color:rgba(255,255,255,.12)}
+.shophead h1{font-size:clamp(46px,8vw,92px);margin:10px 0 14px}
+.shophead .row{color:rgba(255,255,255,.92);font-size:15.5px}
+.shophead .rate{color:#fff}
+.shophead .desc{max-width:56ch;margin:14px 0 0;color:rgba(255,255,255,.92)}
+.back{display:inline-block;color:#fff;font-weight:600;text-decoration:none;opacity:.9}
+.back:hover{text-decoration:underline}
+.tiles.thin{height:10px;background-size:10px 10px}
+
+.shop-layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:36px;padding:36px 0 64px;align-items:start}
+@media (max-width:900px){.shop-layout{grid-template-columns:1fr}}
+.h-sec{font-size:36px;margin:0 0 14px}
+.h-sec:not(:first-child){margin-top:34px}
+
+.sticky{position:sticky;top:84px;padding:22px}
+.sticky h3{font-size:34px;margin-bottom:6px}
+.sticky .btn{width:100%}
+.hours{margin:14px 0 18px;padding:0;list-style:none;display:grid;gap:4px;font-size:14.5px;color:var(--ink2)}
+.hours li{display:flex;justify-content:space-between}
+.hours li span:first-child{text-transform:capitalize}
+.hours .today{font-weight:700;color:var(--ink)}

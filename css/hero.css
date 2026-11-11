@@ -1,0 +1,24 @@
+/* Hero da home: título, busca e o poste de barbeiro girando. */
+.hero{border-bottom:2px solid var(--ink);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(18px,6vw,80px);align-items:center;padding:clamp(36px,7vw,84px) 0}
+.hero h1{font-size:clamp(52px,9.5vw,128px)}
+.hero h1 span{display:block}
+.hero p.lead{font-size:clamp(17px,2vw,20px);max-width:46ch;color:var(--ink2);margin:20px 0 28px}
+
+.search{display:flex;gap:0;max-width:520px;border:2px solid var(--ink);border-radius:999px;background:var(--card);overflow:hidden}
+.search input{flex:1;min-width:0;border:0;background:transparent;padding:14px 20px;outline:none;font-size:16px}
+.search:focus-within{outline:3px solid var(--blue);outline-offset:2px}
+.search button{border:0;border-left:2px solid var(--ink);background:var(--ink);color:var(--porcelain);padding:0 22px;font-weight:700;cursor:pointer}
+.search button:hover{background:var(--redbtn);color:#fff}
+
+.pole{position:relative;width:clamp(58px,12vw,104px);height:clamp(230px,42vw,380px);border:4px solid var(--ink);border-radius:999px;overflow:hidden;background:#fff;box-shadow:0 0 0 6px var(--porcelain),0 0 0 8px var(--chrome)}
+.pole .stripes{position:absolute;left:0;right:0;top:-125px;bottom:0;background:repeating-linear-gradient(45deg,#C8252B 0 22px,#fff 22px 44px,#1D4E9E 44px 66px,#fff 66px 88px);animation:pole-spin 3.2s linear infinite}
+.pole::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,0) 35%,rgba(0,0,0,.18))}
+/* 124.45px = período vertical das listras de 88px a 45 graus (88 / cos 45) */
+@keyframes pole-spin{to{transform:translateY(124.45px)}}
+@media (prefers-reduced-motion:reduce){.pole .stripes{animation:none}}
+
+@media (max-width:520px){
+  .hero h1{font-size:44px}
+  .pole{width:44px;height:210px;border-width:3px;box-shadow:0 0 0 4px var(--porcelain),0 0 0 6px var(--chrome)}
+}
